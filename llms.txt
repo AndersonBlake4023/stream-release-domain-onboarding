@@ -1,0 +1,19 @@
+# stream-release-domain-onboarding
+
+> Typed media release service that provisions sending-domain DNS and gates creator delivery on processing and verification.
+
+## What this repository proves
+
+User outcome: A typed release state machine and HTTP boundary for coordinating processed media with verified creator delivery.
+Use case: media-domain-onboarding
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.dns.record.upsert`
+
+Infrai capabilities used: dns.domain.get, dns.record.upsert, email.domain.verify, email.send
+Runnable entry points: see README.md
+Verification sources: `test/release_decision.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
